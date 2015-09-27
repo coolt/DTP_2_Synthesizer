@@ -1,0 +1,8 @@
+## Zur Info
+
+- Habe den BCD 7-Segment geändert, da ja 4 Zeichen übermittelt werden vom Block "distribution_controller".
+- Den Block "empfang" habe ich auch noch abändern müssen, wegem dem Signal 'active'. Sonst hätte der Block "distribution_controller" das erste Zeichen korrekt übermittelt, aber die 
+  nächsten Zeichen wären um ein Bit verschoben worden. 
+- Den Testbench vom Top-Level habe ich so geschrieben, dass zwei mal eine Folge von 4 Zeichen übermittelt wird.
+
+

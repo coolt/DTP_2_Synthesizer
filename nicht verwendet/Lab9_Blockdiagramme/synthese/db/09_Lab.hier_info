@@ -1,0 +1,250 @@
+|09_Lab.1
+LEDG[0] <= shift_reg:inst3.q4
+LEDG[1] <= shift_reg:inst3.q3
+LEDG[2] <= shift_reg:inst3.q2
+LEDG[3] <= shift_reg:inst3.q1
+LEDG[4] <= shift_reg:inst3.q0
+LEDG[5] <= falling_edge_detector:inst4.Falling
+SW[0] => shift_reg:inst3.P3
+SW[1] => shift_reg:inst3.P2
+SW[2] => shift_reg:inst3.P1
+SW[3] => shift_reg:inst3.P0
+KEY[0] => shift_reg:inst3.CK
+KEY[0] => falling_edge_detector:inst4.Clock
+KEY[0] => falling_edge_detector:inst5.Clock
+KEY[0] => shift_reg:inst6.CK
+KEY[1] => falling_edge_detector:inst4.eingang
+LEDR[0] <= shift_reg:inst6.q4
+LEDR[1] <= shift_reg:inst6.q3
+LEDR[2] <= shift_reg:inst6.q2
+LEDR[3] <= shift_reg:inst6.q1
+LEDR[4] <= shift_reg:inst6.q0
+LEDR[5] <= falling_edge_detector:inst5.Falling
+
+
+|09_Lab.1|shift_reg:inst3
+q0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+MR_n => inst2.ACLR
+MR_n => inst13.ACLR
+MR_n => inst6.ACLR
+MR_n => inst8.ACLR
+MR_n => inst10.ACLR
+CK => inst2.CLK
+CK => inst13.CLK
+CK => inst6.CLK
+CK => inst8.CLK
+CK => inst10.CLK
+DSR => 4to1mux:inst11.I1
+DSL => 4to1mux:inst9.I2
+P4 => 4to1mux:inst9.I3
+S1 => 4to1mux:inst9.SEL1
+S1 => 4to1mux:inst7.SEL1
+S1 => 4to1mux:inst14.SEL1
+S1 => 4to1mux:inst12.SEL1
+S1 => 4to1mux:inst11.SEL1
+S0 => 4to1mux:inst9.SEL0
+S0 => 4to1mux:inst7.SEL0
+S0 => 4to1mux:inst14.SEL0
+S0 => 4to1mux:inst12.SEL0
+S0 => 4to1mux:inst11.SEL0
+P3 => 4to1mux:inst7.I3
+P2 => 4to1mux:inst14.I3
+P1 => 4to1mux:inst12.I3
+P0 => 4to1mux:inst11.I3
+q1 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+q4 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|09_Lab.1|shift_reg:inst3|4to1mux:inst11
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst3|4to1mux:inst12
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst3|4to1mux:inst14
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst3|4to1mux:inst7
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst3|4to1mux:inst9
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|falling_edge_detector:inst4
+Falling <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+eingang => inst4.IN0
+eingang => inst.DATAIN
+Clock => inst.CLK
+reset_n => inst.PRESET
+
+
+|09_Lab.1|falling_edge_detector:inst5
+Falling <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+eingang => inst4.IN0
+eingang => inst.DATAIN
+Clock => inst.CLK
+reset_n => inst.PRESET
+
+
+|09_Lab.1|shift_reg:inst6
+q0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+MR_n => inst2.ACLR
+MR_n => inst13.ACLR
+MR_n => inst6.ACLR
+MR_n => inst8.ACLR
+MR_n => inst10.ACLR
+CK => inst2.CLK
+CK => inst13.CLK
+CK => inst6.CLK
+CK => inst8.CLK
+CK => inst10.CLK
+DSR => 4to1mux:inst11.I1
+DSL => 4to1mux:inst9.I2
+P4 => 4to1mux:inst9.I3
+S1 => 4to1mux:inst9.SEL1
+S1 => 4to1mux:inst7.SEL1
+S1 => 4to1mux:inst14.SEL1
+S1 => 4to1mux:inst12.SEL1
+S1 => 4to1mux:inst11.SEL1
+S0 => 4to1mux:inst9.SEL0
+S0 => 4to1mux:inst7.SEL0
+S0 => 4to1mux:inst14.SEL0
+S0 => 4to1mux:inst12.SEL0
+S0 => 4to1mux:inst11.SEL0
+P3 => 4to1mux:inst7.I3
+P2 => 4to1mux:inst14.I3
+P1 => 4to1mux:inst12.I3
+P0 => 4to1mux:inst11.I3
+q1 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+q4 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|09_Lab.1|shift_reg:inst6|4to1mux:inst11
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst6|4to1mux:inst12
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst6|4to1mux:inst14
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst6|4to1mux:inst7
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
+|09_Lab.1|shift_reg:inst6|4to1mux:inst9
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+SEL0 => inst7.IN0
+SEL0 => inst5.IN0
+SEL0 => inst3.IN1
+SEL1 => inst8.IN0
+SEL1 => inst5.IN1
+SEL1 => inst4.IN0
+I0 => inst.IN2
+I3 => inst5.IN2
+I1 => inst3.IN2
+I2 => inst4.IN2
+
+
